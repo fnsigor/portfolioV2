@@ -1,0 +1,57 @@
+import { ApolloClient, InMemoryCache, gql, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+
+export async function getStaticProps() {
+
+
+    const httpLink = createHttpLink({
+        uri: 'https://api.github.com/graphql',
+    });
+
+    const authLink = setContext((_, { headers }) => {
+        return {
+            headers: {
+                ...headers,
+                authorization: `Bearer ${"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"}`
+            }
+        }
+    });
+
+    const client = new ApolloClient({
+        link: authLink.concat(httpLink),
+        cache: new InMemoryCache()
+    });
+
+    const { data } = await client.query({
+        query: gql`
+         {
+            user(login: "fnsigor") {
+              pinnedItems(first: 10) {
+                edges {
+                  node {
+                    ... on Repository {
+                      nameWithOwner
+                      description
+                      url
+                      homepageUrl
+                      openGraphImageUrl
+                    }
+                  }
+                }
+              }
+            }
+          }`
+    })
+
+    const { user } = data
+    const pinnedItems = user.pinnedItems.edges.map(({ node }) => node)
+
+
+    return {
+        pinnedItems
+    }
+
+}
+
+
