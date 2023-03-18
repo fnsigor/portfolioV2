@@ -5,26 +5,26 @@ import { setContext } from '@apollo/client/link/context';
 export async function getStaticProps() {
 
 
-    const httpLink = createHttpLink({
-        uri: 'https://api.github.com/graphql',
-    });
+  const httpLink = createHttpLink({
+    uri: 'https://api.github.com/graphql',
+  });
 
-    const authLink = setContext((_, { headers }) => {
-        return {
-            headers: {
-                ...headers,
-                authorization: `Bearer ${"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"}`
-            }
-        }
-    });
+  const authLink = setContext((_, { headers }) => {
+    return {
+      headers: {
+        ...headers,
+        authorization: `Bearer ${import.meta.env.VITE_GITHUB_ACCESS_TOKEN}`
+      }
+    }
+  });
 
-    const client = new ApolloClient({
-        link: authLink.concat(httpLink),
-        cache: new InMemoryCache()
-    });
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache()
+  });
 
-    const { data } = await client.query({
-        query: gql`
+  const { data } = await client.query({
+    query: gql`
          {
             user(login: "fnsigor") {
               pinnedItems(first: 10) {
@@ -42,15 +42,15 @@ export async function getStaticProps() {
               }
             }
           }`
-    })
+  })
 
-    const { user } = data
-    const pinnedItems = user.pinnedItems.edges.map(({ node }) => node)
+  const { user } = data
+  const pinnedItems = user.pinnedItems.edges.map(({ node }) => node)
 
 
-    return {
-        pinnedItems
-    }
+  return {
+    pinnedItems
+  }
 
 }
 
