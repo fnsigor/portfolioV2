@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache, gql, createHttpLink } from '@apollo/client
 import { setContext } from '@apollo/client/link/context';
 
 
-export async function getStaticProps() {
+export async function getAllProjects() {
 
 
   const httpLink = createHttpLink({
@@ -27,7 +27,7 @@ export async function getStaticProps() {
     query: gql`
          {
             user(login: "fnsigor") {
-              pinnedItems(first: 10) {
+              pinnedItems(first: 15) {
                 edges {
                   node {
                     ... on Repository {

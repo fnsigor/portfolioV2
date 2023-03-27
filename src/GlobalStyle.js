@@ -18,6 +18,11 @@ export const GlobalStyle = createGlobalStyle`
     color: #fff;
 }
 
+body{
+    padding-inline: 5rem;
+    scroll-behavior: smooth;
+}
+
 
 @font-face {
     font-family: 'Adero';
