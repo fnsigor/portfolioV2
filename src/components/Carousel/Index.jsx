@@ -51,33 +51,56 @@ export function Carousel({ pinnedItems }) {
 	return (
 		<ThemeProvider theme={colors}>
 			<div className="carouselContainer">
-				<div className="gallery" style={{ width: '100%' }}>
-					<div className='gallery-container' >
 
-						{
-							pinnedItems.map((item, index) => (
+				<div className='gallery-container' >
+
+					{
+						pinnedItems.map((item, index) => (
+
+
+							<div
+								className={`gallery-item gallery-item-${index + 1}`}
+								ref={(item) => { carouselArray.current.push(item) }}
+								key={item.openGraphImageUrl}
+							>
+
 								<img
-									key={item.openGraphImageUrl}
+
 									src={item.openGraphImageUrl}
 									alt={item.description}
 									className={`gallery-item gallery-item-${index + 1}`}
-									ref={(item) => { carouselArray.current.push(item) }}
-									data-index="1" />
-							))
-						}
 
-						<article
-							className="gallery-item gallery-item-4"
-							ref={(item) => { carouselArray.current.push(item) }}
-							data-index="4"
-						>
-							<Link to={'/projects'}>
-								<Dots />
-								Ver mais
-							</Link>
-						</article>
+								/>
+								<div className="content">
+									<p className="aboutProject">
+										{item.description}
+									</p>
+									<div className="links">
+										<a href="">Acessar projeto</a>
+										<a href="">Repositório</a>
+									</div>
+								</div>
+
+
+
+							</div>
+
+
+						))
+					}
+
+					<div verMais="verMais"
+						className="gallery-item gallery-item-4"
+						ref={(item) => { carouselArray.current.push(item) }}
+						data-index="4"
+					>
+						<Link to={'/projects'}>
+							<Dots />
+							Ver mais
+						</Link>
 					</div>
 				</div>
+
 
 				<button
 					className="gallery-controls-previous"

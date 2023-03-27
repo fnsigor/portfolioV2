@@ -1,82 +1,116 @@
 .carouselContainer {
     position: relative;
-
+    border: 1px dashed red;
 }
-
 
 
 .gallery-container {
     display: flex;
     align-items: center;
-    height: 400px;
-    max-width: 1000px;
+    width: 100%;
+    min-height: 60rem;
     position: relative;
-    margin: 0 auto;
-}
 
+    background-color: aquamarine;
+}
 
 
 .gallery-item {
-    height: 200px;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    width: 330px;
-    z-index: 0;
+    height: fit-content;
+    width: 45rem;
     border-radius: 15px;
-    background-size: contain;
+
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    z-index: 0;
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%); */
+
 }
 
-
-
 .gallery-item-1,
-.gallery-item-3 {
-    height: 250px;
-    opacity: 0.8;
-    width: 380px;
+.gallery-item-3,
+.gallery-item-4 {
     z-index: 1;
 }
 
-.gallery-item-1 {
-    /* left item */
-    left: 20%;
-    transform: translateX(-50%);
-
+.gallery-item-1 .content,
+.gallery-item-3 .content,
+.gallery-item-4 .content {
+    visibility: hidden;
 }
 
-.gallery-item-2 {
-    /* center item */
-    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    height: 300px;
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 430px;
-    z-index: 2;
+
+.gallery-item-1 img,
+.gallery-item-3 img,
+.gallery-item-4 img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
 
 
+
+.gallery-item-1 {
+    /* previous item */
+    /* left: 20%;
+    transform: translateX(-50%); */
 
 }
 
 .gallery-item-3 {
     /* right item */
-    left: 80%;
-    transform: translateX(-50%);
+    /* left: 80%;
+    transform: translateX(-50%); */
 }
 
 .gallery-item-4 {
     /* behind item */
     opacity: .4;
-    left: 30%;
-    transform: translateX(-50%);
+    /* left: 30%;
+    transform: translateX(-50%); */
 }
 
-article {
+
+
+.gallery-item-2 {
+    /* current item */
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    z-index: 2;
+    opacity: 1;
+}
+
+.gallery-item-2 img {
+    width: 100%;
+    height: 300px;
+}
+
+.gallery-item-2 .content {
+    visibility: visible;
+}
+
+
+
+div[verMais="verMais"] {
     background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 250px;
 }
+
+div[verMais="verMais"].gallery-item-2 {
+    width: 40rem;
+    height: 300px;
+}
+
+
+
 
 
 .gallery-controls-previous,
