@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from 'styled-components';
 import colors from '../globalStyle';
 import { DesktopMenu } from '../components/DesktopMenu';
-import { ReactPopUp } from '../components/ReactPopUp';
+import { RadixPopUp } from '../components/RadixPopUp';
 import { Carousel } from '../components/Carousel';
 import { useLoaderData } from "react-router-dom";
 import { Form } from '../components/Form';
@@ -134,30 +134,44 @@ export function Index() {
 		.contactsUl{
 			display: flex;
 			flex-direction:column;
-			gap: 2rem;
+			gap: 4rem;
+		}
+		
+		.contactsUl li{
+			position: relative;
 		}
 
-		.contactsUl a {
+		.contactsUl li::after{
+			content: "";
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			box-shadow: 0px 2px 2px ${props => props.theme.lightPurple};
+			background-color: transparent;
+		}
+
+
+		.contactsUl span{
 			font-size: 1.8rem;
-			color:  ${props => props.theme.paragraphColor};
-			transition: .3s;
-			font-weight: 200;
-			
-		}
-
-		.contactsUl a:hover{
-			text-shadow: ${props => props.theme.neonTextShadow};
-		}
-
-		.contactsUl li span{
-			font-size: 2rem;
 			margin-bottom: .5rem;
-		}
-
-		.contactsUl li > * {
 			display: block;
 		}
 
+		.contactsUl a {
+			font-size: 2.4rem;
+			color:  ${props => props.theme.paragraphColor};
+			transition: .3s;
+			font-weight: 200;
+			display: block;
+			
+		}
+	`
+
+	const Footer = styled.footer`
+
+		h6{
+			font-size:1.6rem
+		}
 	`
 
 	return (
@@ -187,7 +201,13 @@ export function Index() {
 								<li><span>Javascript</span></li>
 								<li><span>HTML</span></li>
 								<li><span>CSS</span></li>
-								<li><ReactPopUp /></li>
+								<li>
+									<RadixPopUp
+										color="blue"
+										itemName="React"
+										popUpTitle="Ferramentas"
+										popUpDescription="Styled components, react router" />
+								</li>
 								<li><span>GIT</span></li>
 							</ul>
 						</div>
@@ -228,6 +248,20 @@ export function Index() {
 						</div>
 					</SectionContact>
 				</main>
+
+
+				<Footer>
+					<h6>Essa aplicação foi construida com as seguintes tecnologias:</h6>
+					<ul>
+						<li><a href="" target="_blank">React</a></li>
+						<li><a href="" target="_blank">Styled Components</a></li>
+						<li><a href="" target="_blank">Radix Ui</a></li>
+						<li><a href="" target="_blank">ChatGPT</a></li>
+						<li><a href="" target="_blank">React Router</a></li>
+						<li><a href="" target="_blank">GraphQL</a></li>
+						<li><a href="" target="_blank">Apollo Client</a></li>
+					</ul>
+				</Footer>
 
 
 			</PageContent>
