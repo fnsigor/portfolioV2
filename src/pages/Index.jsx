@@ -4,6 +4,7 @@ import { DesktopMenu } from '../components/DesktopMenu';
 import { ReactPopUp } from '../components/ReactPopUp';
 import { Carousel } from '../components/Carousel';
 import { useLoaderData } from "react-router-dom";
+import { Form } from '../components/Form';
 
 
 
@@ -33,8 +34,6 @@ export function Index() {
 				margin-bottom: 15rem ;
 			}
 `
-
-
 
 
 	const Header = styled.header`
@@ -103,6 +102,7 @@ export function Index() {
 
 	`
 
+
 	const SectionProjects = styled.section`
 
 	h4{
@@ -111,10 +111,58 @@ export function Index() {
 	
 	`
 
+	const SectionContact = styled.section`
+	
+		h4{
+			text-align: center;
+		}
+	
+		.content{
+			display: flex;
+		}
+
+		.content > *{
+			flex: 1;
+		}
+
+		.formContainer, .contactsContainer{
+			display: flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		.contactsUl{
+			display: flex;
+			flex-direction:column;
+			gap: 2rem;
+		}
+
+		.contactsUl a {
+			font-size: 1.8rem;
+			color:  ${props => props.theme.paragraphColor};
+			transition: .3s;
+			font-weight: 200;
+			
+		}
+
+		.contactsUl a:hover{
+			text-shadow: ${props => props.theme.neonTextShadow};
+		}
+
+		.contactsUl li span{
+			font-size: 2rem;
+			margin-bottom: .5rem;
+		}
+
+		.contactsUl li > * {
+			display: block;
+		}
+
+	`
+
 	return (
 		<ThemeProvider theme={colors}>
 			<PageContent>
-
 
 				<Header>
 					<h1 className='glow'>FNSIGOR</h1>
@@ -149,6 +197,36 @@ export function Index() {
 						<h4 className="subtitle glow">Projetos recentes</h4>
 						<Carousel pinnedItems={pinnedItems} />
 					</SectionProjects>
+
+					<SectionContact>
+						<h4 className="subtitle glow">Contato e Redes Sociais</h4>
+						<div className="content">
+							<div className="formContainer">
+								<Form />
+							</div>
+							<div className="contactsContainer">
+								<ul className="contactsUl">
+									<li>
+										<span>Email: </span>
+										<a href="">igorfernamdez@gmail.com</a>
+									</li>
+									<li>
+
+										<span>Whatsapp:</span>
+										<a href="">48984489254</a>
+									</li>
+									<li>
+										<span>Linkedin: </span>
+										<a href="">igorfernamdez@gmail.com</a>
+									</li>
+									<li>
+										<span>Github: </span>
+										<a href="">fnsigor</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</SectionContact>
 				</main>
 
 
