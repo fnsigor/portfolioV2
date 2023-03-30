@@ -3,7 +3,7 @@ import colors from '../globalStyle';
 
 export function Form() {
 
-    const Form = styled.form`
+	const Form = styled.form`
    
         color: ${props => props.theme.paragraphColor};
 
@@ -67,11 +67,10 @@ export function Form() {
 			color: #fff;
 			transition: .3s;
 			font-size: 1.8rem;
-
 			font-family: monospace;
-
-			border: 1px solid ${props => props.theme.lightPurple};
-			box-shadow: 0 0 10px ${props => props.theme.lightPurple};
+			border: none;
+			border-bottom: 2px solid ${props => props.theme.lightPurple};
+			box-shadow: 0 0 3px ${props => props.theme.lightPurple};
 			border-radius: 5px;
 		}
 
@@ -83,23 +82,23 @@ export function Form() {
 		}
     `
 
-    return (
-        <Form>
-            <div>
-                <label htmlFor="">Nome</label>
-                <input type="text" name="" id="" placeholder='Seu nome' />
-            </div>
-            <div>
-                <label htmlFor="">Email</label>
-                <input type="text" name="" id="" placeholder='Seu melhor email' />
-            </div>
+	return (
+		<Form>
+			<div>
+				<label htmlFor="">Nome</label>
+				<input type="text" name="" id="" placeholder='Seu nome' />
+			</div>
+			<div>
+				<label htmlFor="">Email</label>
+				<input type="text" name="" id="" placeholder='Seu melhor email' />
+			</div>
 
-            <div>
-                <label htmlFor="">Mensagem:</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
+			<div>
+				<label htmlFor="">Mensagem:</label>
+				<textarea name="" id="" cols="30" rows="10"></textarea>
+			</div>
 
-            <button>Enviar email</button>
-        </Form>
-    )
+			<button>Enviar email</button>
+		</Form>
+	)
 }
