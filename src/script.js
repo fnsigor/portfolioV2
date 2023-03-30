@@ -1,1 +1,0 @@
-document.querySelector('.carousel-3d-controls').mdbCarousel3d();
