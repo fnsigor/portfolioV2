@@ -4,46 +4,60 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-:root {
-    font-size: 62.5%;
-}
+    @font-face {
+        font-family: 'Adero';
+        src: url('./fonts/downlink/Downlink-gav1.ttf');
+    }
 
+    @font-face {
+        font-family: 'Cyberfunk';
+        src: url('./fonts/cyberfunk/Cyberfunk-RGyM.ttf');
+    }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: #fff;
-}
+    @font-face {
+        font-family: 'Cyberway';
+        src: url('./fonts/cyberway/CyberwayRiders-lg97d.ttf');
+    }
 
-body{
-    padding-inline: 5rem;
-    scroll-behavior: smooth;
-}
+    :root {
+        font-size: 62.5%;
+    }
 
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+    }
 
-@font-face {
-    font-family: 'Adero';
-    src: url('./fonts/downlink/Downlink-gav1.ttf');
-}
+    body{
+        padding-inline: 5rem;
+        scroll-behavior: smooth;
+        font-family: 'Adero', monospace;
+        background-color: #000010;
+    }
 
-@font-face {
-    font-family: 'Cyberfunk';
-    src: url('./fonts/cyberfunk/Cyberfunk-RGyM.ttf');
-}
+    section, header{
+        margin-bottom: 15rem ;
+    }
 
-@font-face {
-    font-family: 'Cyberway';
-    src: url('./fonts/cyberway/CyberwayRiders-lg97d.ttf');
-}
+    h4{
+        text-align: center;
+    }
 
-body {
-    font-family: 'Adero', monospace;
-    background-color: #000010;
-}
+    .glow{
+        text-shadow:0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 10px #ff00ff, 0 0 98px #ff00ff;
+    }
 
+    .subtitle{
+        font-family: "Cyberfunk", monospace;
+        color: #FFF;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
 
 `
 
