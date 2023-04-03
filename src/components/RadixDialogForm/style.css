@@ -1,0 +1,104 @@
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+.DialogOverlay {
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 2;
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+    --titleColor: #fff;
+    --paragraphColor: #fcfcfc;
+    --darkPurple: #000010;
+    --mediumPurple: #250132;
+    --lightPurple: #ff00ff;
+    --lightBlue: rgb(66, 66, 177);
+    --blueNeonTextShadow: 0 0 5px rgb(124, 124, 253), 0 0 15px rgb(66, 66, 177), 0 0 20px rgb(66, 66, 177), 0 0 40px rgb(66, 66, 177), 0 0 60px rgb(66, 66, 177), 0 0 10px rgb(66, 66, 177), 0 0 98px rgb(66, 66, 177);
+    --neonTextShadow: 0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 10px #ff00ff, 0 0 98px #ff00ff;
+
+
+    box-shadow: 0px 0px 15px #a51fd6;
+    background-color: #F2F2F2;
+
+    border-radius: 6px;
+    width: 90vw;
+    max-width: 450px;
+    max-height: 85vh;
+    padding: 25px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+
+    transform: translate(-50%, -50%);
+
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent:focus {
+    outline: none;
+}
+
+.DialogTitle {
+    margin: 0;
+    font-weight: 500;
+    color: var(--darkPurple);
+    font-size: 17px;
+}
+
+.DialogDescription {
+    margin: 10px 0 20px;
+    color: var(--darkPurple);
+    font-size: 15px;
+}
+
+.Button {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    padding: .5rem 2rem;
+    border: none;
+    color: var(--darkPurple);
+}
+
+.SendEmailButton {
+    background-color: #a51fd6;
+    color: #FFFF;
+    transition: .3s;
+}
+
+.SendEmailButton:hover {
+    cursor: pointer;
+    background-color: #03C988;
+    box-shadow: 0 0 8px #03C988;
+}
+
+strong {
+    color: var(--darkPurple);
+}

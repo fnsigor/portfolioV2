@@ -2,6 +2,8 @@ import React from 'react';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import './styles.css';
 
+
+//FIXME desativar scrollbar ao clicar no elemento e aumentar z-index, pois está conflitando com o carrosel
 export const RadixPopUp = ({ color, itemName, popUpTitle, popUpDescription }) => (
     <AlertDialog.Root>
         <AlertDialog.Trigger asChild>

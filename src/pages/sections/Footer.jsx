@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 
+
+//TODO adicionar popover do radix no item do chatgpt pra explicar como usei
+//adicionar links restantes
 export function Footer() {
 
 

@@ -8,7 +8,8 @@ import { BsFillArrowRightCircleFill as NextArrow } from "react-icons/bs";
 import { HiDotsCircleHorizontal as Dots } from "react-icons/hi";
 
 
-
+//FIXME setas de controle estão tortas
+// TODO arrumar layout do article
 export function Carousel({ pinnedItems }) {
 
 

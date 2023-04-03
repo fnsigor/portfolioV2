@@ -67,6 +67,7 @@ const colors = {
     darkPurple: "#000010",
     mediumPurple: "#250132",
     lightPurple: "#ff00ff",
+    newPurple: "#A51FD6",
     lightBlue: "rgb(66, 66, 177)",
     blueNeonTextShadow: "0 0 5px rgb(124, 124, 253), 0 0 15px rgb(66, 66, 177), 0 0 20px rgb(66, 66, 177), 0 0 40px rgb(66, 66, 177), 0 0 60px rgb(66, 66, 177), 0 0 10px rgb(66, 66, 177), 0 0 98px rgb(66, 66, 177)",
     neonTextShadow: `0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 10px #ff00ff, 0 0 98px #ff00ff`

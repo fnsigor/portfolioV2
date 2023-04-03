@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { BsWhatsapp, BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
-import { MdEmail } from 'react-icons/md'
 import { SiFrontendmentor } from 'react-icons/si'
+import { RadixDialogForm } from '../../components/RadixDialogForm/Index';
+
+
 
 
 
@@ -18,7 +20,7 @@ export function SectionContact() {
     
     .contactsUl li{
         height: 6rem;
-        width: auto;
+        width: 6rem;
     }
 
     svg{
@@ -35,7 +37,7 @@ export function SectionContact() {
             <address className="content">
                 <ul className="contactsUl">
                     <li>
-                        <a href=""><MdEmail /></a>
+                        <RadixDialogForm />
                     </li>
                     <li>
                         <a href=""><BsWhatsapp /></a>
@@ -50,7 +52,7 @@ export function SectionContact() {
                         <a href=""><BsTwitter /></a>
                     </li>
                     <li>
-                        <a href=""><SiFrontendmentor /></a>
+                        <SiFrontendmentor />
                     </li>
                 </ul>
 
