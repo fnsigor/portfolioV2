@@ -4,11 +4,11 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+
     @font-face {
         font-family: 'Adero';
-        src: url('./fonts/downlink/Downlink-gav1.ttf');
+        src: url('./fonts/adero/AderotrialRegular-ZVreq.otf');
     }
-
     @font-face {
         font-family: 'Cyberfunk';
         src: url('./fonts/cyberfunk/Cyberfunk-RGyM.ttf');
