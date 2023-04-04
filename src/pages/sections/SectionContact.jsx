@@ -4,35 +4,35 @@ import { SiFrontendmentor } from 'react-icons/si'
 import { RadixDialogForm } from '../../components/RadixDialogForm/Index';
 
 
+const Content = styled.section`
+	
+.contactsUl{
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+}
 
+.contactsUl li{
+    height: 6rem;
+    width: 6rem;
+}
+
+svg{
+    height:100%;
+    width: 100%;
+}
+
+`
 
 
 
 export function SectionContact() {
 
-    const SectionContact = styled.section`
-	
-    .contactsUl{
-        display: flex;
-        gap: 8rem;
-        justify-content: center;
-    }
-    
-    .contactsUl li{
-        height: 6rem;
-        width: 6rem;
-    }
 
-    svg{
-        height:100%;
-        width: 100%;
-    }
-    
-`
 
 
     return (
-        <SectionContact>
+        <Content>
             <h4 className="subtitle glow">Contato e Redes Sociais</h4>
             <address className="content">
                 <ul className="contactsUl">
@@ -57,6 +57,6 @@ export function SectionContact() {
                 </ul>
 
             </address>
-        </SectionContact>
+        </Content>
     )
 }

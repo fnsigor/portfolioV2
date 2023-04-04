@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import { DesktopMenu } from '../../components/DesktopMenu';
 
-
-
-
-
-export function Header() {
-
-	const Header = styled.header`
+const Content = styled.header`
 
 	position: relative;
 	min-height: 100vh;
@@ -33,11 +27,17 @@ export function Header() {
 
 `
 
+
+
+export function Header() {
+
+
+
 	return (
-		<Header>
+		<Content>
 			<h1 className='glow'>FNSIGOR</h1>
 			<span>Desenvolvedor Front-end</span>
 			<DesktopMenu />
-		</Header>
+		</Content>
 	)
 }

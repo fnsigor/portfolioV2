@@ -2,13 +2,7 @@ import styled from 'styled-components';
 import { RadixPopUp } from '../../components/RadixPopUp';
 
 
-
-
-
-export function SectionStack() {
-
-
-    const SectionStack = styled.section`
+const Content = styled.section`
 
 		.stack-list{
 			display: flex;
@@ -29,8 +23,14 @@ export function SectionStack() {
 	`
 
 
+export function SectionStack() {
+
+
+
+
+
     return (
-        <SectionStack className="stack-section">
+        <Content className="stack-section">
             <h4 className="subtitle glow">Stack</h4>
             <ul className="stack-list">
                 <li><span>Javascript</span></li>
@@ -45,7 +45,7 @@ export function SectionStack() {
                 </li>
                 <li><span>GIT</span></li>
             </ul>
-        </SectionStack>
+        </Content>
 
     )
 }

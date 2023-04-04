@@ -4,47 +4,51 @@ import styled from 'styled-components';
 
 //TODO adicionar popover do radix no item do chatgpt pra explicar como usei
 //adicionar links restantes
+
+
+
+const Content = styled.footer`
+
+
+padding-bottom: 1.5rem;
+width: 100%;
+color: white;
+
+	h6{
+		font-size:1.4rem;
+		font-weight: 400;
+		line-height: 100%;
+	}
+
+	ul{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+	}
+
+	ul li:first-child{
+		margin-right: 5px;
+	}
+
+	li a{
+		font-size: 1.4rem;
+	}
+
+	ul li:not(ul li:first-child):not(ul li:last-child):after{
+		content: ",";
+		margin-right: 10px;
+	}
+
+`
+
 export function Footer() {
 
 
-	const Footer = styled.footer`
-
-
-	padding-bottom: 1.5rem;
-	width: 100%;
-	color: white;
-
-		h6{
-			font-size:1.4rem;
-			font-weight: 400;
-			line-height: 100%;
-		}
-
-		ul{
-			display: flex;
-			align-items: center;
-			width: 100%;
-			justify-content: center;
-		}
-
-		ul li:first-child{
-			margin-right: 5px;
-		}
-
-		li a{
-			font-size: 1.4rem;
-		}
-
-		ul li:not(ul li:first-child):not(ul li:last-child):after{
-			content: ",";
-			margin-right: 10px;
-		}
-
-	`
 
 
 	return (
-		<Footer>
+		<Content>
 			<ul>
 				<li><h6>Ferramentas usadas para construção desse portfólio:</h6></li>
 				<li><a href="" target="_blank">React</a></li>
@@ -55,7 +59,7 @@ export function Footer() {
 				<li><a href="" target="_blank">GraphQL</a></li>
 				<li><a href="" target="_blank">Apollo Client</a></li>
 			</ul>
-		</Footer>
+		</Content>
 
 	)
 }
