@@ -9,33 +9,41 @@ import { SectionProjects } from './sections/SectionProjects';
 import { SectionContact } from './sections/SectionContact';
 import { Header } from './sections/Header';
 import { Footer } from './sections/Footer';
+import { RadixToast } from '../components/RadixToast/Index';
+import { useState } from 'react';
+import { EmailContext } from '../EmailContext';
+import { useEffect } from 'react';
 
 
 export function Index() {
 
 	const { pinnedItems } = useLoaderData()
 
+	const [enviadoComSucesso, setEnviadoComSucesso] = useState(null)
 
-	const PageContent = styled.div`
+	useEffect(() => { //Clean State Function
+		setTimeout(() => {
+			setEnviadoComSucesso(null)
+		}, 2000)
+	}, [enviadoComSucesso])
 
-		
 
-			
-`
 
 	return (
 		<ThemeProvider theme={colors}>
+			<EmailContext.Provider value={[enviadoComSucesso, setEnviadoComSucesso]} >
 
+				<Header />
+				<main>
+					<SectionAbout />
+					<SectionStack />
+					<SectionProjects pinnedItems={pinnedItems} />
+					<SectionContact />
+				</main>
+				<Footer />
+				{enviadoComSucesso !== null ? <RadixToast enviadoComSucesso={enviadoComSucesso} /> : null}
 
-			<Header />
-			<main>
-				<SectionAbout />
-				<SectionStack />
-				<SectionProjects pinnedItems={pinnedItems} />
-				<SectionContact />
-			</main>
-			<Footer />
-
+			</EmailContext.Provider>
 		</ThemeProvider>
 
 	)
