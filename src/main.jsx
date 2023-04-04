@@ -6,7 +6,7 @@ import ErrorPage from './pages/ErrorPage';
 import { getSomeProjects } from './getSomeProjects';
 import { getAllProjects } from './getAllProjects';
 import { AllProjects } from './pages/AllProjects';
-import { GlobalStyle } from './globalStyle.js';
+import { GlobalStyle } from './globalStyle.js'
 
 
 const router = createBrowserRouter([
