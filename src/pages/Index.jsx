@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from 'styled-components';
-import colors from '../globalStyle';
+import colors from '../GlobalStyles';
 import { useLoaderData } from "react-router-dom";
 
 

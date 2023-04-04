@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import colors from '../../globalStyle';
+import colors from '../../GlobalStyles';
 import './style.css'
 import { BsFillArrowLeftCircleFill as PreviousArrow } from "react-icons/bs";
 import { BsFillArrowRightCircleFill as NextArrow } from "react-icons/bs";
