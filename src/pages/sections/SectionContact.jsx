@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { BsWhatsapp, BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { SiFrontendmentor } from 'react-icons/si'
-import { RadixDialogForm } from '../../components/RadixDialogForm/Index';
+import { RadixDialogForm } from '../../components/RadixDialogForm';
 
 
 const Content = styled.section`
