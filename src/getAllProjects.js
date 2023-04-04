@@ -13,7 +13,7 @@ export async function getAllProjects() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${import.meta.env.VITE_GITHUB_ACCESS_TOKEN}`
+        authorization: `Bearer ${process.env.VITE_GITHUB_ACCESS_TOKEN}`
       }
     }
   });
