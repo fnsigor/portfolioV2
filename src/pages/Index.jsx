@@ -9,7 +9,7 @@ import { SectionProjects } from './sections/SectionProjects';
 import { SectionContact } from './sections/SectionContact';
 import { Header } from './sections/Header';
 import { Footer } from './sections/Footer';
-import { RadixToast } from '../components/RadixToast/Index';
+import { RadixToast } from '../components/RadixToast/';
 import { useState } from 'react';
 import { EmailContext } from '../EmailContext';
 import { useEffect } from 'react';
