@@ -13,7 +13,7 @@ export async function getAllProjects() {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${process.env.VITE_GITHUB_ACCESS_TOKEN}`
+        authorization: `Bearer ${import.meta.env.VITE_GITHUB_ACCESS_TOKEN}`
       }
     }
   });
@@ -36,6 +36,7 @@ export async function getAllProjects() {
                       url
                       homepageUrl
                       openGraphImageUrl
+                      name
                     }
                   }
                 }

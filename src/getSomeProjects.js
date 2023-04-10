@@ -36,6 +36,7 @@ export async function getSomeProjects() {
                       url
                       homepageUrl
                       openGraphImageUrl
+                      name
                     }
                   }
                 }
