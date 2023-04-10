@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h4{
-        text-align: center;
+        
     }
 
     .glow{
