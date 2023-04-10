@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import '../RadixDialogForm/style.css';
 import axios from 'axios';
 import { EmailContext } from '../../EmailContext';
+
+
+
 const Formulario = styled.form`
       	background-color: #F2F2F2;
-
-
 
 		* {
 			display: block;
@@ -37,7 +38,7 @@ const Formulario = styled.form`
 			transition: .3s;
 			
 			font-size: 1.6rem;
-			line-height: 1.6rem
+			line-height: 1.6rem;
 			font-family: monospace;
 
 			padding: .8rem;

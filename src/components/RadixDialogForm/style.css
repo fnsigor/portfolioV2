@@ -85,18 +85,30 @@
     padding: .5rem 2rem;
     border: none;
     color: var(--darkPurple);
+    transition: .3s;
 }
 
 .SendEmailButton {
-    background-color: #a51fd6;
+    background-color: #03C988;
     color: #FFFF;
-    transition: .3s;
+
 }
 
 .SendEmailButton:hover {
     cursor: pointer;
-    background-color: #03C988;
-    box-shadow: 0 0 8px #03C988;
+
+    box-shadow: 0 0 10px #03C988;
+}
+
+.Button.Close {
+    margin-top: 2rem;
+    background-color: #E0144C;
+    color: #F2F2F2;
+}
+
+.Button.Close:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #E0144C;
 }
 
 strong {

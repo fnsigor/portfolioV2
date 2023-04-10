@@ -6,7 +6,7 @@ import gmail from '../../assets/gmail.svg'
 import { Form } from '../Form/Form';
 
 
-//TODO fazer estilização
+
 export const RadixDialogForm = () => {
 
 	const [isFormVisible, setIsFormVisible] = useState(false)
@@ -33,6 +33,9 @@ export const RadixDialogForm = () => {
 
 					<Form setIsFormVisible={setIsFormVisible} />
 
+					<Dialog.Close asChild onClick={() => setIsFormVisible(false)}>
+						<button className="Button Close">Fechar</button>
+					</Dialog.Close>
 				</Dialog.Content>
 
 			</Dialog.Portal>
