@@ -9,7 +9,7 @@ const Content = styled.section`
 .contactsUl{
     display: flex;
     gap: 8rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .contactsUl li{
