@@ -5,6 +5,7 @@ import splidecss from '@splidejs/react-splide/css/skyblue';
 import next from '../../assets/nextArrow.svg'
 import previous from '../../assets/previousArrow.svg'
 import { IndexProjectCard } from '../../components/IndexProjectCard';
+import { VerMais } from '../../components/VerMais';
 
 
 
@@ -32,7 +33,7 @@ export function SectionProjects({ pinnedItems }) {
         <section>
             <h4 className="subtitle glow">Projetos recentes</h4>
             <Content>
-                <Splide style={{ border: '2px solid red' }}
+                <Splide
                     hasTrack={false}
                     options={{
                         type: 'loop', //slide, loop, fade
@@ -58,15 +59,16 @@ export function SectionProjects({ pinnedItems }) {
 
                         {
                             pinnedItems.map(project => (
-                                <SplideSlide>
+                                <SplideSlide key={project.name}>
                                     <IndexProjectCard project={project} />
                                 </SplideSlide>
 
                             ))
                         }
 
-
-
+                        <SplideSlide key="vermais">
+                            <VerMais />
+                        </SplideSlide>
 
                     </SplideTrack>
 
