@@ -2,8 +2,18 @@ import React, { useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import styled from 'styled-components';
 import './style.css';
-import gmail from '../../assets/gmail.svg'
+import email from '../../assets/email.svg'
 import { Form } from '../Form/Form';
+
+
+const Img = styled.img`
+
+filter: drop-shadow(0 0 15px #ff0000);
+
+	:hover{
+		cursor: pointer;
+	}
+`
 
 
 
@@ -16,7 +26,7 @@ export const RadixDialogForm = () => {
 		<Dialog.Root open={isFormVisible}>
 
 			<Dialog.Trigger asChild style={{ height: '100%', width: '100%' }} >
-				<img src={gmail} alt="Email (igorfernamdez@gmail.com) Dialog Box" style={{ filter: 'invert()' }}
+				<Img src={email} alt="Email (igorfernamdez@gmail.com) Dialog Box" style={{}}
 					onClick={() => setIsFormVisible(true)} />
 			</Dialog.Trigger>
 

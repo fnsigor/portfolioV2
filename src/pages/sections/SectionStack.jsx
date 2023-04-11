@@ -7,7 +7,7 @@ const Content = styled.section`
 		.stack-list{
 			display: flex;
 			gap: 3rem;
-			justify-content: center;
+			justify-content: flex-start;
 			flex: 1;
 		}
 
@@ -38,7 +38,7 @@ export function SectionStack() {
                 <li><span>CSS</span></li>
                 <li>
                     <RadixPopUp
-                        color="blue"
+                        color="#5ccfee"
                         itemName="React"
                         popUpTitle="Ferramentas"
                         popUpDescription="Styled components, react router" />

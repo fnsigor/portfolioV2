@@ -3,16 +3,14 @@ import styled from 'styled-components';
 const Content = styled.section`	
 
         p{
-            margin-inline: auto;
-            font-size: 1.8rem;
+            
+            font-size: 2rem;
             margin-bottom: 1rem;
-            width: 50%;
             word-spacing: .3rem;
-            line-height: 2rem
+            font-family: monospace;
         }
 
         span{
-            font-family: monospace;
             font-size:2.4rem
         }
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import { RadixPopUp } from '../../components/RadixPopUp';
 
 
 
-//TODO adicionar popover do radix no item do chatgpt pra explicar como usei
 //adicionar links restantes
 
 
@@ -12,12 +12,13 @@ const Content = styled.footer`
 
 padding-bottom: 1.5rem;
 width: 100%;
-color: white;
+color: #FFF;
 
 	h6{
 		font-size:1.4rem;
 		font-weight: 400;
 		line-height: 100%;
+		word-spacing: .2rem;
 	}
 
 	ul{
@@ -31,7 +32,7 @@ color: white;
 		margin-right: 5px;
 	}
 
-	li a{
+	li a, button{
 		font-size: 1.4rem;
 	}
 
@@ -50,11 +51,16 @@ export function Footer() {
 	return (
 		<Content>
 			<ul>
-				<li><h6>Ferramentas usadas para construção desse portfólio:</h6></li>
+				<li><h6>Ferramentas usadas para a construção desse portfólio:</h6></li>
 				<li><a href="" target="_blank">React</a></li>
 				<li><a href="" target="_blank">Styled Components</a></li>
 				<li><a href="" target="_blank">Radix Ui</a></li>
-				<li><a href="" target="_blank">ChatGPT</a></li>
+				<li><RadixPopUp
+					color={"#74aa9d"}
+					itemName="ChatGPT"
+					popUpTitle="Como assim ChatGPT?"
+					popUpDescription="Essa IA foi usada ao longo do desenvolvimento, para tirar algumas dúvidas que surgiam"
+				/></li>
 				<li><a href="" target="_blank">React Router</a></li>
 				<li><a href="" target="_blank">GraphQL</a></li>
 				<li><a href="" target="_blank">Apollo Client</a></li>
