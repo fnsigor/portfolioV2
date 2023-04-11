@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         font-size: 62.5%;
+        padding-inline: 5rem;
     }
 
     * {
@@ -33,7 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        padding-inline: 5rem;
         scroll-behavior: smooth;
         font-family: 'Adero', monospace;
         background-color: #000010;
