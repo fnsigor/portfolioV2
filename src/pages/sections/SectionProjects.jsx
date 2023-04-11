@@ -4,31 +4,22 @@ import React from 'react';
 import splidecss from '@splidejs/react-splide/css/skyblue';
 import next from '../../assets/nextArrow.svg'
 import previous from '../../assets/previousArrow.svg'
+import { IndexProjectCard } from '../../components/IndexProjectCard';
 
 
-
-
-
-const Wrapper = styled.div`
-    justify-content: center;
-    display: flex;
-    gap: 4rem;
-`
 
 const Content = styled.div`
 
     ${splidecss}
 
-    img{
-        height:40rem;
-        width: 80rem; 
-        object-fit: cover;
-      
-    }
-
     .splide__arrows img{
       height: 5rem;
       width: 5rem;   
+    }
+
+    .splide__slide{
+        height:40rem;
+        width: 80rem !important; 
     }
 
 `
@@ -46,7 +37,7 @@ export function SectionProjects({ pinnedItems }) {
                     options={{
                         type: 'loop', //slide, loop, fade
                         // padding: { y: 10 }, //css values
-                        gap: '800px', //1 rem default
+                        gap: '5rem', //1 rem default
                         // rewind: true,
                         speed: 500, //transition in milliseconds
                         // fixedWidth: '10vw',
@@ -65,17 +56,18 @@ export function SectionProjects({ pinnedItems }) {
 
                     <SplideTrack>
 
-                        <SplideSlide>
-                            <img src="https://source.unsplash.com/featured/800x500" alt="" />
-                        </SplideSlide>
+                        {
+                            pinnedItems.map(project => (
+                                <SplideSlide style={{ border: '1px solid red' }}>
+                                    <IndexProjectCard project={project} />
+                                </SplideSlide>
 
-                        <SplideSlide>
-                            <img src="https://source.unsplash.com/featured/800x501" alt="" />
-                        </SplideSlide>
+                            ))
+                        }
 
-                        <SplideSlide>
-                            <img src="https://source.unsplash.com/featured/800x502" alt="" />
-                        </SplideSlide>
+
+
+
                     </SplideTrack>
 
                     <div className="splide__arrows">
