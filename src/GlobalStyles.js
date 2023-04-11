@@ -63,6 +63,7 @@ export const GlobalStyle = createGlobalStyle`
 
 const colors = {
     titleColor: " #fff",
+    red: "#E0144C",
     paragraphColor: "#fcfcfc",
     darkPurple: "#000010",
     mediumPurple: "#250132",
