@@ -58,7 +58,7 @@ export function SectionProjects({ pinnedItems }) {
 
                         {
                             pinnedItems.map(project => (
-                                <SplideSlide style={{ border: '1px solid red' }}>
+                                <SplideSlide>
                                     <IndexProjectCard project={project} />
                                 </SplideSlide>
 

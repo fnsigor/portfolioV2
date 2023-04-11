@@ -31,7 +31,7 @@ const Content = styled.div`
             h5{
                 font-size:2.5rem;
                 margin-bottom: 4rem;
-              
+                text-transform: uppercase;
             }
 
         
