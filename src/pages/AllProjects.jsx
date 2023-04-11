@@ -21,11 +21,6 @@ const Content = styled.main`
 export function AllProjects() {
     const { pinnedItems } = useLoaderData()
 
-    useEffect(() => {
-        console.log(pinnedItems)
-    }, [])
-
-
     return (
 
         <ThemeProvider theme={colors}>
