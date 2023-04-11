@@ -14,9 +14,10 @@ const Formulario = styled.form`
 		}
 
 		label {
-			font-size: 1.8rem;
+			font-size: 2rem;
 			margin-bottom: .5rem;
 			color: ${props => props.theme.darkPurple};
+            font-family: monospace;
 		}
 
 		input,
@@ -92,7 +93,7 @@ export function Form({ setIsFormVisible }) {
         <Formulario onSubmit={sendEmail}>
 
             <div>
-                <label htmlFor="name">Nome</label>
+                <label htmlFor="name">Nome:</label>
                 <input
                     value={guestName}
                     onChange={(event) => setGuestName(event.target.value)}
@@ -104,7 +105,7 @@ export function Form({ setIsFormVisible }) {
             </div>
 
             <div>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email:</label>
                 <input
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}

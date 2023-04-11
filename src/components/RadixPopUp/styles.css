@@ -35,15 +35,17 @@
 .AlertDialogTitle {
     margin: 0;
     color: #000;
-    font-size: 17px;
+    font-size: 2rem;
     font-weight: 500;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .AlertDialogDescription {
     margin-bottom: 20px;
     color: #000;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 1.8rem;
+    font-family: monospace;
 
 }
 
@@ -58,10 +60,14 @@
     font-weight: 500;
     height: 35px;
     background-color: #000;
+    transition: .3s;
 }
 
 .closeButton:hover {
     cursor: pointer;
+    background-color: #E0144C;
+    box-shadow: 0 0 10px #E0144C;
+    color: #FFF;
 }
 
 .itemName {

@@ -69,23 +69,28 @@
     margin: 0;
     font-weight: 500;
     color: var(--darkPurple);
-    font-size: 17px;
+    font-size: 2.4rem;
+    text-align: center;
 }
 
 .DialogDescription {
+    text-align: center;
     margin: 10px 0 20px;
     color: var(--darkPurple);
-    font-size: 15px;
+    font-family: monospace, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 
 .Button {
     width: 100%;
     border-radius: 5px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: .5rem 2rem;
     border: none;
     color: var(--darkPurple);
     transition: .3s;
+    font-family: 'Adero', monospace, sans-serif;
 }
 
 .SendEmailButton {
