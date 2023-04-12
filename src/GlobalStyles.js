@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         font-size: 62.5%;
-        padding-inline: 5rem;
+        padding-inline: 10vw;
     }
 
     * {
@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: #000010;
     }
 
-    section, header{
+    section{
         margin-bottom: 15rem ;
     }
 
@@ -57,6 +57,12 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 3.5rem;
         text-transform: uppercase;
         margin-bottom: 2rem;
+    }
+
+    @media(max-width: 1366px){
+        :root{
+            padding-inline: 5rem;
+        }
     }
 
 `
