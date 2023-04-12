@@ -51,7 +51,7 @@ export function SectionProjects({ pinnedItems }) {
                         arrows: true,
                         pagination: false,
                         pauseOnHover: true,
-                        wheel: true,
+                        wheel: false,
                     }}
                 >
 
