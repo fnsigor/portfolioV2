@@ -11,12 +11,14 @@ const Content = styled.header`
 	align-items: center;
 	flex-direction: column;
 
+	margin-bottom: 15rem;
+
 	h1{
-	font-size: 12.8rem;
-	color: ${props => props.theme.titleColor};
-	font-family: "Cyberway", monospace;
-	text-transform: none;
-	margin-bottom: 2rem;
+		font-size: 12.8rem;
+		color: ${props => props.theme.titleColor};
+		font-family: "Cyberway", monospace;
+		text-transform: none;
+		margin-bottom: 2rem;
 	}
 
 	span{

@@ -26,7 +26,7 @@ export const RadixDialogForm = () => {
 		<Dialog.Root open={isFormVisible}>
 
 			<Dialog.Trigger asChild style={{ height: '100%', width: '100%' }} >
-				<Img src={email} alt="Email (igorfernamdez@gmail.com) Dialog Box" style={{}}
+				<Img src={email} alt="Email (igorfernamdez@gmail.com) Dialog Box" title="Email"
 					onClick={() => setIsFormVisible(true)} />
 			</Dialog.Trigger>
 
