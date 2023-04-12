@@ -21,7 +21,7 @@ export function SectionAbout() {
 
 
     return (
-        <Content >
+        <Content id='sobre'>
             <h4 className="subtitle glow">Sobre</h4>
             <p>Tive meu primeiro contato com programação em <span>2021</span>, quando criei minhas primeiras aplicações Back-end, utilizando Java e MySQL</p>
             <p> Por ser uma pessoa que gosta de usar a criatividade, não tive dúvidas no momento em que conheci o Front-end: era com a construção de interfaces utilizando código que eu queria trabalhar.</p>

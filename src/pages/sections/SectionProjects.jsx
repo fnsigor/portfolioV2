@@ -30,7 +30,7 @@ export function SectionProjects({ pinnedItems }) {
 
 
     return (
-        <section>
+        <section id='projetos'>
             <h4 className="subtitle glow">Projetos recentes</h4>
             <Content>
                 <Splide

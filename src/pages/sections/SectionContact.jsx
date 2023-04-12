@@ -32,7 +32,7 @@ export function SectionContact() {
 
 
     return (
-        <Content>
+        <Content id='contatos'>
             <h4 className="subtitle glow">Contato e Redes Sociais</h4>
             <address className="content">
                 <ul className="contactsUl">

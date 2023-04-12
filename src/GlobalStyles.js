@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         font-size: 62.5%;
         padding-inline: 10vw;
+        scroll-behavior: smooth;
     }
 
     * {

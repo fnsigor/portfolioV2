@@ -30,7 +30,7 @@ export function SectionStack() {
 
 
     return (
-        <Content className="stack-section">
+        <Content className="stack-section" id='stack'>
             <h4 className="subtitle glow">Stack</h4>
             <ul className="stack-list">
                 <li><span>Javascript</span></li>

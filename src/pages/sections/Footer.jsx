@@ -2,11 +2,6 @@ import styled from 'styled-components';
 import { RadixPopUp } from '../../components/RadixPopUp';
 
 
-
-//adicionar links restantes
-
-
-
 const Content = styled.footer`
 
 

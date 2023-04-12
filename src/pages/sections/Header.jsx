@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { DesktopMenu } from '../../components/DesktopMenu';
+import { MenuButton } from '../../components/MenuButton/MenuButton';
 
 const Content = styled.header`
 
 	position: relative;
 	min-height: 100vh;
-
+	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -27,6 +27,8 @@ const Content = styled.header`
 		font-size: 4.8rem;
 	}
 
+
+
 `
 
 
@@ -39,7 +41,7 @@ export function Header() {
 		<Content>
 			<h1 className='glow'>FNSIGOR</h1>
 			<span>Desenvolvedor Front-end</span>
-			<DesktopMenu />
+			<MenuButton />
 		</Content>
 	)
 }
