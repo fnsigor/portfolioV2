@@ -2,21 +2,22 @@ import styled, { ThemeProvider } from 'styled-components';
 
 const Content = styled.div`
 
-        width: 40rem;
-        background-color: #272727;
-        border-radius: 5px;
+        width: 100%;
+        background-color: #212121;
+        border-radius: 10px;
         min-height: 40rem;
 
         display: flex;
         flex-direction:column;
 
-        padding: 1rem 1rem 1.5rem 1rem;
+        padding: 1.5rem 1rem 1.5rem 1rem;
         
 
         h5{
             font-size:2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
+            color: #FFF;
         }
 
         img{
@@ -27,10 +28,11 @@ const Content = styled.div`
         }
 
         p{
-           
+            color: #FFF;
             font-size:1.6rem;
             flex-grow: 1;
             font-family: monospace;
+            text-align: center;
         }
 
         div{
@@ -41,6 +43,7 @@ const Content = styled.div`
         a{
             font-size:1.6rem;
             font-family: monospace;
+            color: #FFF;
         }
 
 
