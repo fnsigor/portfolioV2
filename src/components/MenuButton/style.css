@@ -1,0 +1,181 @@
+@keyframes slideUpAndFade {
+    from {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRightAndFade {
+    from {
+        opacity: 0;
+        transform: translateX(-2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDownAndFade {
+    from {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeftAndFade {
+    from {
+        opacity: 0;
+        transform: translateX(2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.PopoverContent[data-state='open'][data-side='top'] {
+    animation-name: slideDownAndFade;
+}
+
+.PopoverContent[data-state='open'][data-side='right'] {
+    animation-name: slideLeftAndFade;
+}
+
+.PopoverContent[data-state='open'][data-side='bottom'] {
+    animation-name: slideUpAndFade;
+}
+
+.PopoverContent[data-state='open'][data-side='left'] {
+    animation-name: slideRightAndFade;
+}
+
+/* =================================ANIMATIONS=================================== */
+
+.PopoverContent {
+
+    --titleColor: #fff;
+    --paragraphColor: #fcfcfc;
+    --darkPurple: #000010;
+    --mediumPurple: #250132;
+    --lightPurple: #ff00ff;
+    --lightBlue: rgb(66, 66, 177);
+
+    border-radius: 4px;
+    padding: 1rem;
+    width: fit-content;
+    background-color: var(--lightPurple);
+
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+    z-index: 2;
+
+    box-shadow: 0 0 5px 1px #ff00ff;
+
+}
+
+.PopoverContent ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.PopoverContent li * {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--paragraphColor);
+    text-shadow: 0 0 2px var(--darkPurple);
+    transition: .2s;
+    cursor: pointer;
+    word-spacing: 1px;
+}
+
+.PopoverContent li *:hover {
+    color: var(--darkPurple);
+    text-shadow: 0 0 2px var(--mediumPurple);
+}
+
+
+.PopoverArrow {
+    fill: var(--lightPurple);
+}
+
+.PopoverClose {
+    font-family: inherit;
+    border-radius: 100%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background-color: var(--darkPurple);
+    transition: .2s;
+    border: none;
+}
+
+.PopoverClose:hover {
+    cursor: pointer;
+}
+
+
+.IconButton {
+    font-family: inherit;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff00ff;
+    background-color: #ff00ff;
+    border: none;
+    transition: .5s;
+
+    position: absolute;
+    top: 10%;
+    right: 8%;
+
+    animation-name: botaoMenu;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.IconButton:hover {
+    box-shadow: 0 0 10px 1px #ff00ff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+@keyframes botaoMenu {
+    0% {
+        box-shadow: 0 0 2px 1px #ff00ff;
+    }
+
+    100% {
+        box-shadow: 0 0 15px 4px #ff00ff;
+    }
+}
