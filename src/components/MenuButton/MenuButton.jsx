@@ -8,12 +8,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import './style.css'
 
 
-
-const MenuItems = styled.ul`
-
-
-`
-
 export function MenuButton() {
 
     return (

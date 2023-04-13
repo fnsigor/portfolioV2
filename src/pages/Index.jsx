@@ -1,8 +1,6 @@
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import colors from '../GlobalStyles';
 import { useLoaderData } from "react-router-dom";
-
-
 import { SectionAbout } from './sections/SectionAbout';
 import { SectionStack } from './sections/SectionStack';
 import { SectionProjects } from './sections/SectionProjects';

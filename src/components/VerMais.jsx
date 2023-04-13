@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import vermais from '../assets/vermais.png'
 import { Link } from 'react-router-dom';
 const Content = styled.div`
