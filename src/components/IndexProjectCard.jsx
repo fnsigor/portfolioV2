@@ -11,6 +11,7 @@ const Content = styled.div`
         .bg{
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
 
             width: 100%;
             height: 100%;
@@ -67,6 +68,46 @@ const Content = styled.div`
                 text-shadow: ${props => props.theme.neonTextShadow};
             }
 
+        }
+
+        @media(max-width:850px){
+            
+            .content{
+
+                h5{
+                    text-align: center;
+                    font-size: 1.875rem;
+                }
+
+                p{
+                    font-size: 1.875rem;
+                }
+
+
+                div.links{
+                    display: block;
+                    text-align: center;
+       
+                    position: absolute;
+                    left: 0;
+                    bottom: 4rem;
+                    
+                    width: 100%;
+                    padding-inline: 2rem;
+
+                    *{
+                        display: inline-block;
+                        background-color: ${props => props.theme.lightPurple};
+                        width: 85%;
+                        border-radius: 5px;
+                        padding-block: 1rem;
+                    }
+                    
+                    a:first-child{
+                        margin-bottom: 4rem;
+                    }
+                }
+            }
         }
 
 

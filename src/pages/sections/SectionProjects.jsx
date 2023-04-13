@@ -23,6 +23,26 @@ const Content = styled.div`
         width: 80rem !important; 
     }
 
+
+    
+	@media(max-width:850px){
+        .splide__slide{
+            height: 90vh;
+            width: 40rem !important;
+        }
+
+        .splide__arrows img{
+            height: 3rem;
+            width: 3rem;   
+        }
+	}
+
+    @media(max-width:510px){
+        .splide__slide{
+            width: 100% !important;
+        }
+    }
+
 `
 
 

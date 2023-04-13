@@ -14,6 +14,19 @@ const Content = styled.section`
             font-size:2.4rem
         }
 
+        @media(max-width:850px){
+            p{
+                font-size: 1.875rem;
+                max-width: 600px;
+                margin-inline:auto;
+            }
+
+            span{
+                font-size:2rem
+            }
+
+        }
+
         `
 
 export function SectionAbout() {

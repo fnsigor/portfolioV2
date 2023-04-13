@@ -10,17 +10,27 @@ const Content = styled.section`
     display: flex;
     gap: 8rem;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
-.contactsUl li{
+svg{
     height: 6rem;
     width: 6rem;
 }
 
-svg{
-    height:100%;
-    width: 100%;
+
+@media(max-width:850px){
+
+    svg{
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .contactsUl{
+        justify-content: center;
+    }
 }
+
 
 `
 

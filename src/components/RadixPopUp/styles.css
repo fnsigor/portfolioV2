@@ -77,6 +77,13 @@
 
 }
 
+@media(max-width:850px) {
+    .itemName {
+        font-size: 2.25rem;
+    }
+}
+
+
 
 
 @keyframes overlayShow {

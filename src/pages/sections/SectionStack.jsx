@@ -20,7 +20,21 @@ const Content = styled.section`
 			width: 300px;
 		}
 
-	`
+        @media(max-width:850px){
+
+            margin-inline:auto;
+
+            .stack-list{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stack-list span{
+                font-size: 2.25rem;
+            }
+        }
+
+`
 
 
 export function SectionStack() {

@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import colors from '../../GlobalStyles';
 import React from 'react';
 import * as Popover from '@radix-ui/react-popover';

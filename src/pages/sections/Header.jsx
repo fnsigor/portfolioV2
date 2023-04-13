@@ -27,6 +27,23 @@ const Content = styled.header`
 		font-size: 4.8rem;
 	}
 
+	@media(max-width:850px){
+
+		margin-bottom: 10rem;
+
+		h1{
+			font-size: 6rem;
+			margin-bottom: 2.5rem;
+		}
+
+		span{
+			font-size: 3.75rem;
+			text-align: center;
+		}
+
+
+	}
+
 
 
 `

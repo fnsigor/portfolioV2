@@ -43,10 +43,6 @@ export const GlobalStyle = createGlobalStyle`
         margin-bottom: 15rem ;
     }
 
-    h4{
-        
-    }
-
     .glow{
         text-shadow:0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 10px #ff00ff, 0 0 98px #ff00ff;
     }
@@ -64,6 +60,23 @@ export const GlobalStyle = createGlobalStyle`
             padding-inline: 5rem;
         }
     }
+
+    
+	@media(max-width:850px){
+		:root{
+            padding-inline: 2.5rem;
+        }
+
+        .subtitle{
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        section{
+            margin-bottom: 10rem ;
+        }
+	}
 
 `
 

@@ -13,6 +13,12 @@ filter: drop-shadow(0 0 15px #ff0000);
 	:hover{
 		cursor: pointer;
 	}
+
+	
+	@media(max-width:850px){
+		height: 4rem;
+		width: 4rem;
+	}
 `
 
 
@@ -25,7 +31,7 @@ export const RadixDialogForm = () => {
 	return (
 		<Dialog.Root open={isFormVisible}>
 
-			<Dialog.Trigger asChild style={{ height: '100%', width: '100%' }} >
+			<Dialog.Trigger asChild>
 				<Img src={email} alt="Email (igorfernamdez@gmail.com) Dialog Box" title="Email"
 					onClick={() => setIsFormVisible(true)} />
 			</Dialog.Trigger>

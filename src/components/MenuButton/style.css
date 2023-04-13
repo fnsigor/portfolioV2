@@ -170,6 +170,15 @@
     transition: .2s;
 }
 
+@media(max-width:850px) {
+    .IconButton {
+        top: initial;
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 @keyframes botaoMenu {
     0% {
         box-shadow: 0 0 2px 1px #ff00ff;
