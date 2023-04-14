@@ -14,10 +14,10 @@ const Formulario = styled.form`
 		}
 
 		label {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			margin-bottom: .5rem;
 			color: ${props => props.theme.darkPurple};
-            font-family: monospace;
+            font-family: 'Adero', monospace, sans-serif;
 		}
 
 		input,
@@ -27,7 +27,7 @@ const Formulario = styled.form`
 		}
 
 		input{
-			margin-bottom: 1.8rem;
+			margin-bottom: 2.4rem;
 		}
 
 
@@ -38,9 +38,10 @@ const Formulario = styled.form`
 
 			transition: .3s;
 			
-			font-size: 1.6rem;
-			line-height: 1.6rem;
+			font-size: 2rem;
+			line-height: 2.2rem;
 			font-family: monospace;
+            word-spacing: -5px;
 
 			padding: .8rem;
 			border: 1px solid  ${props => props.theme.mediumPurple};
@@ -59,6 +60,22 @@ const Formulario = styled.form`
 			color:  ${props => props.theme.darkPurple};
 			background-color: #962abd67;
 		}
+
+
+
+        @media(max-width:850px){
+
+            label {
+			    font-size: 1.6rem;
+		    }
+
+            input,
+            textarea{
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+            }
+
+        }
 `
 
 

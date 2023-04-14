@@ -15,6 +15,9 @@ const Content = styled.footer`
 	@media(max-width:1555px){
 		flex-direction: column;
 		margin-bottom: 5px;
+		h6{
+			text-transform: uppercase;
+		}
 	}
 	
 
@@ -25,7 +28,6 @@ const Content = styled.footer`
 		word-spacing: .2rem;
 		text-align: start;
 		margin-right: 10px;
-		text-transform: uppercase;
 	}
 
 	ul{
