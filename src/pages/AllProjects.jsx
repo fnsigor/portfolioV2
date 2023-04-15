@@ -1,9 +1,9 @@
 import styled, { ThemeProvider } from 'styled-components';
 import colors from '../GlobalStyles';
-import { Link, useLoaderData } from "react-router-dom";
-import { ProjectCard } from '../components/ProjectCard';
+import { useLoaderData } from "react-router-dom";
 import { Footer } from './sections/Footer';
-
+import { IndexProjectCard } from '../components/IndexProjectCard';
+import { MenuButton } from '../components/MenuButton/MenuButton';
 
 
 const Content = styled.div`
@@ -24,38 +24,46 @@ const Content = styled.div`
         
         main ul{ 
             display: grid; 
-            grid-gap: 5rem; 
-            grid-template-columns: repeat(3, 35rem); 
-            justify-content: center; 
-            justify-items: center; 
+            grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+            grid-auto-rows: 480px;
+
+            justify-content: center;
+            gap: 50px;
 
             margin-bottom: 5rem;
         }
 
+        main ul li{
+            width: 100%;
+            height: 100%;
+        }
+/* 
 
-        nav *{
-            font-size: 1.8rem;
-            background-color: ${props => props.theme.newPurple};
-            width: 10%;
-            padding-block: 1rem;
-            border-radius: 5px;
-            border: none;
-            display:block;
-            margin-inline:auto;
-            text-align: center;
-            transition: .3s;
+        .IconButton{
+            top: 3.4rem;
+            right: 8%;
+        } */
+
+
+            /* @media(max-width:850px) {
+
             
-        }
-
-        nav *:hover{
-            cursor: pointer;
-            box-shadow: 0 0 10px  ${props => props.theme.newPurple};
-        }
+             .IconButton {
+                    position: fixed;
+                    top:initial;
+                    z-index: 3;
+                    left:initial;
+                    bottom: 15%;
+                    right: 0%;
+                }
+            } */
+        
 
 `
 
 
 export function AllProjects() {
+
     const { pinnedItems } = useLoaderData()
 
     return (
@@ -65,23 +73,19 @@ export function AllProjects() {
                 <header>
                     <h1 className="subtitle glow">Todos os projetos</h1>
                 </header>
+                <MenuButton />
 
                 <main>
                     <ul>
                         {
                             pinnedItems.map(project => (
                                 <li key={project.name}>
-                                    <ProjectCard project={project} key={project.nameWithOwner} />
+                                    <IndexProjectCard project={project} key={project.nameWithOwner} />
                                 </li>
                             ))
                         }
                     </ul>
 
-                    <nav>
-
-                        <Link to="/">Voltar</Link>
-
-                    </nav>
                 </main>
                 <Footer />
             </Content>

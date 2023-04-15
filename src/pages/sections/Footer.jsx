@@ -61,6 +61,7 @@ const Content = styled.footer`
 			text-align: center;
 			font-size: 1rem;
 			margin-bottom: 5px;
+			margin-right: 0;
 		}
 
 		ul{

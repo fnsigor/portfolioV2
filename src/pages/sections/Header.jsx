@@ -20,8 +20,9 @@ const Content = styled.header`
 		text-transform: none;
 		margin-bottom: 2rem;
 	}
-
+	
 	span{
+		word-break: keep-all;
 		font-family: "Cyberfunk", monospace;
 		color: ${props => props.theme.titleColor};
 		font-size: 4.8rem;
@@ -57,7 +58,9 @@ export function Header() {
 	return (
 		<Content>
 			<h1 className='glow'>FNSIGOR</h1>
-			<span>Desenvolvedor Front-end</span>
+			{(window.screen.width >= 365 && window.screen.width <= 419)
+				? (<span>Desenvolvedor <br /> Front-end</span>) :
+				(<span>Desenvolvedor Front-end</span>)}
 			<MenuButton />
 		</Content>
 	)

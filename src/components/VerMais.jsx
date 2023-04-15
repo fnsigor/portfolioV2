@@ -91,8 +91,6 @@ const Content = styled.div`
                 div.links{
                     flex-direction:column;
                     align-items: center;
-        
-                    bottom: 4rem;
                     
                     padding-inline: 2rem;
                     

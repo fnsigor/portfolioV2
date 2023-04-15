@@ -3,7 +3,10 @@ import styled from 'styled-components';
 
 export const Bt = styled.button`
 
-    width: 40%;
+    width: 100%;
+    max-width: 30rem;
+    min-width: 25rem;
+    
     border-radius: 4px;
     padding: 0 2rem;
     font-size: 1.5rem;
@@ -58,6 +61,7 @@ const Content = styled.div`
                 font-size:2.5rem;
                 margin-bottom: 4rem;
                 text-transform: uppercase;
+                word-spacing:3px;
             }
 
         
@@ -71,6 +75,8 @@ const Content = styled.div`
             div.links{
                 display: flex;
                 justify-content:space-between;
+                flex-wrap:wrap;
+                gap: 3rem;
 
                 
                 position: absolute;
@@ -112,16 +118,8 @@ const Content = styled.div`
 
                 div.links{
                     flex-direction:column;
-                    align-items: center;
-       
-                    bottom: 4rem;
-                    
+                    align-items: center;         
                     padding-inline: 2rem;
- 
-                    button:first-child{
-                        margin-bottom: 3rem;
-                    }
-                    
                 }
             }
         }
@@ -140,6 +138,15 @@ function ProjectLinks({ project }) {
     }
 }
 
+function ProjectName({ name }) {
+
+    const newName = name.replaceAll('_', ' ')
+
+    return (
+        <h5>{newName}</h5>
+    )
+}
+
 export function IndexProjectCard({ project }) {
 
 
@@ -148,7 +155,7 @@ export function IndexProjectCard({ project }) {
             <div className="bg" style={{ backgroundImage: `url(${project.openGraphImageUrl})` }}>
             </div>
             <div className="content">
-                <h5>{project.name}</h5>
+                <ProjectName name={project.name} />
                 <p>{project.description}</p>
                 <div className="links">
                     <Bt>
