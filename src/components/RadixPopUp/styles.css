@@ -82,11 +82,11 @@
     text-align: center;
     height: 3.5rem;
     transition: .3s;
+    background-color: #E0144C;
 }
 
 .closeButton:hover {
     cursor: pointer;
-    background-color: #E0144C;
     box-shadow: 0 0 10px #E0144C;
 }
 

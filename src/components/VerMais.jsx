@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 import vermais from '../assets/vermais.png'
 import { Link } from 'react-router-dom';
+import { Bt } from './IndexProjectCard'
+
+
 const Content = styled.div`
 
-     
         height: 100%;
         position: relative;
-  
-
 
         .bg{
             background-repeat: no-repeat;
             background-size: cover;
+            background-position:center;
 
             width: 100%;
             height: 100%;
@@ -23,17 +24,18 @@ const Content = styled.div`
         }
 
         .content{
-            position: absolute;
-            width: 100%;
             height: 100%;
+            position: relative;
+            border: 2px solid ${props => props.theme.newPurple};
+            border-radius: 5px;
+
             padding: 2rem;
-         
+            
 
             h5{
                 font-size:2.5rem;
                 margin-bottom: 4rem;
                 text-transform: uppercase;
-                word-spacing: 5px;
             }
 
         
@@ -63,13 +65,41 @@ const Content = styled.div`
                 font-family: monospace;
                 text-transform: uppercase;
                 transition: .3s;
-            }
-
-            a:hover{
-                text-shadow: ${props => props.theme.neonTextShadow};
+                color: #fff;
             }
 
         }
+
+        @media(max-width:850px){
+            
+            .content{
+
+                h5{
+                    text-align: center;
+                    font-size: 1.875rem;
+                }
+
+                p{
+                    font-size: 1.6rem;
+                }
+
+                a{
+                    font-size:1.6rem;
+                }
+
+
+                div.links{
+                    flex-direction:column;
+                    align-items: center;
+        
+                    bottom: 4rem;
+                    
+                    padding-inline: 2rem;
+                    
+                }
+            }
+        }
+
 
 
 `
@@ -86,7 +116,9 @@ export function VerMais({ project }) {
                 <h5>outros projetos</h5>
                 <p>Achou que era só isso? <br /> Existem muitos outros projetos feitos, bora dar uma olhada!</p>
                 <div className="links">
-                    <Link to="/projects">Ver mais projetos</Link>
+                    <Bt>
+                        <Link to="/projects">Ver mais projetos</Link>
+                    </Bt>
                 </div>
             </div>
 

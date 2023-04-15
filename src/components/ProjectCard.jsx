@@ -46,6 +46,10 @@ const Content = styled.div`
             color: #FFF;
         }
 
+        @media(max-width:850px) {
+            
+        }
+
 
 `
 

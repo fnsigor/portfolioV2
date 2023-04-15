@@ -1,10 +1,35 @@
 import styled from 'styled-components';
 
+
+export const Bt = styled.button`
+
+    width: 40%;
+    border-radius: 4px;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    text-align: center;
+    height: 3.5rem;
+    background-color: ${props => props.theme.newPurple};
+
+    box-shadow: 0 0 5px 1px ${props => props.theme.lightPurple} ;
+    border: none;
+    transition: .3s;
+    font-family: 'Adero', monospace, sans-serif;
+
+    @media(max-width:850px){
+        width: 100%;
+    }
+`
+
 const Content = styled.div`
 
      
         height: 100%;
         position: relative;
+        border: 2px solid ${props => props.theme.newPurple};
+        border-radius: 5px;
   
 
 
@@ -62,10 +87,7 @@ const Content = styled.div`
                 font-family: monospace;
                 text-transform: uppercase;
                 transition: .3s;
-            }
-
-            a:hover{
-                text-shadow: ${props => props.theme.neonTextShadow};
+                color: #fff;
             }
 
         }
@@ -80,32 +102,26 @@ const Content = styled.div`
                 }
 
                 p{
-                    font-size: 1.875rem;
+                    font-size: 1.6rem;
+                }
+
+                a{
+                    font-size:1.6rem;
                 }
 
 
                 div.links{
-                    display: block;
-                    text-align: center;
+                    flex-direction:column;
+                    align-items: center;
        
-                    position: absolute;
-                    left: 0;
                     bottom: 4rem;
                     
-                    width: 100%;
                     padding-inline: 2rem;
-
-                    *{
-                        display: inline-block;
-                        background-color: ${props => props.theme.lightPurple};
-                        width: 85%;
-                        border-radius: 5px;
-                        padding-block: 1rem;
+ 
+                    button:first-child{
+                        margin-bottom: 3rem;
                     }
                     
-                    a:first-child{
-                        margin-bottom: 4rem;
-                    }
                 }
             }
         }
@@ -135,8 +151,12 @@ export function IndexProjectCard({ project }) {
                 <h5>{project.name}</h5>
                 <p>{project.description}</p>
                 <div className="links">
-                    <ProjectLinks project={project} />
-                    <a href={project.url} target="_blank">Repositório</a>
+                    <Bt>
+                        <ProjectLinks project={project} />
+                    </Bt>
+                    <Bt>
+                        <a href={project.url} target="_blank">Repositório</a>
+                    </Bt>
                 </div>
             </div>
 
