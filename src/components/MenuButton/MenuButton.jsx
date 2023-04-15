@@ -28,9 +28,6 @@ export function MenuButton() {
                             <li><Link to="/#contatos">CONTATO E REDES SOCIAIS</Link></li>
                             <li><Link to="/projects">TODOS OS PROJETOS</Link></li>
                         </ul>
-                        <Popover.Close className="PopoverClose" aria-label="Close">
-                            <Cross2Icon />
-                        </Popover.Close>
                         <Popover.Arrow className="PopoverArrow" />
                     </Popover.Content>
                 </Popover.Portal>
