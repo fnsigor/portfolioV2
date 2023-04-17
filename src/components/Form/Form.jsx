@@ -204,6 +204,7 @@ export function Form({ setIsFormVisible }) {
                     name="message"
                     id="message"
                     cols="30"
+                    rows="4"
                     {...register("message", {
                         onChange: e => setMessage(e.target.value),
                         required: "Esse campo é obrigatório ",
