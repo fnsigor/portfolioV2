@@ -96,6 +96,7 @@ export function Footer() {
 				<li><a href="https://graphql.org/" target="_blank">GraphQL</a></li>
 				<li><a href="https://www.apollographql.com/docs/" target="_blank">Apollo Client</a></li>
 				<li><a href="https://axios-http.com/ptbr/docs/intro" target="_blank">Axios</a></li>
+				<li><a href="https://vitejs.dev/" target="_blank">Vite</a></li>
 			</ul>
 		</Content>
 
