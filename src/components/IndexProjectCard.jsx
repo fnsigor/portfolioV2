@@ -8,7 +8,6 @@ export const Bt = styled.button`
     min-width: 25rem;
     
     border-radius: 4px;
-    padding: 0 2rem;
     font-size: 1.5rem;
     line-height: 1;
     font-weight: 500;
@@ -94,6 +93,18 @@ const Content = styled.div`
                 text-transform: uppercase;
                 transition: .3s;
                 color: #fff;
+                width: 100%;
+                height: 100%;
+                padding: 0 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+
+
+                :hover{
+                    background-color: ${props => props.theme.mediumPurple}
+                }
             }
 
         }

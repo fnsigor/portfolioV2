@@ -66,6 +66,18 @@ const Content = styled.div`
                 text-transform: uppercase;
                 transition: .3s;
                 color: #fff;
+                width: 100%;
+                height: 100%;
+                padding: 0 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+
+
+                :hover{
+                    background-color: ${props => props.theme.mediumPurple}
+                }
             }
 
         }
