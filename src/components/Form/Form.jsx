@@ -44,7 +44,7 @@ const Formulario = styled.form`
 			font-family: monospace;
             word-spacing: -5px;
 
-			padding: .8rem;
+			padding: .4rem .8rem;
 			border: 1px solid  ${props => props.theme.mediumPurple};
 			border-radius: 5px;
 		}
@@ -176,6 +176,7 @@ export function Form({ setIsFormVisible }) {
                     id="email"
                     key="email"
                     {...register("email", {
+                        required: "Esse campo é obrigatório ",
                         onChange: e => setEmail(e.target.value),
                         pattern: {
                             value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
