@@ -38,7 +38,7 @@ export function MenuButton() {
                             <li><Link to="/#stack">STACK</Link></li>
                             <li><Link to="/#projetos">PROJETOS RECENTES</Link></li>
                             <li><Link to="/#contatos">CONTATO E REDES SOCIAIS</Link></li>
-                            <li>{isProjectsPage ? (<Link to="/">VOLTAR</Link>) : (<Link to="/projects">TODOS OS PROJETOS</Link>)}</li>
+                            <li>{isProjectsPage ? (<Link to="/">PÁGINA INICIAL</Link>) : (<Link to="/projects">TODOS OS PROJETOS</Link>)}</li>
                         </ul>
                         <Popover.Arrow className="PopoverArrow" />
                     </Popover.Content>

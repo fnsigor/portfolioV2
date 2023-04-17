@@ -31,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         color: #fff;
+        user-select: none;
     }
 
     body{

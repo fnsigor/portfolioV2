@@ -89,12 +89,13 @@ export function Footer() {
 				<li><RadixPopUp
 					color={"#74aa9d"}
 					itemName="ChatGPT"
-					popUpTitle="Como assim ChatGPT?"
-					popUpDescription="Essa IA foi usada ao longo do desenvolvimento, para tirar algumas dúvidas que surgiam"
+					popUpTitle="Usando IAs como ferramenta"
+					popUpDescription="Foi a minha primeira vez utilizando IA na programação. Nesse projeto, o ChatGPT me ajudou a trabalhar com váriaveis css utilizando Styled Components. A IA também foi util na hora de fazer buscas na API do GitHub com GraphQL."
 				/></li>
 				<li><a href="https://reactrouter.com/en/main" target="_blank">React Router</a></li>
 				<li><a href="https://graphql.org/" target="_blank">GraphQL</a></li>
 				<li><a href="https://www.apollographql.com/docs/" target="_blank">Apollo Client</a></li>
+				<li><a href="https://axios-http.com/ptbr/docs/intro" target="_blank">Axios</a></li>
 			</ul>
 		</Content>
 

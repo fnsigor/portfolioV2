@@ -27,7 +27,7 @@ const Content = styled.div`
     
 	@media(max-width:850px){
         .splide__slide{
-            height: 90vh;
+            height: 85vh;
             width: 40rem !important;
         }
 

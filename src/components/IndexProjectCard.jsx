@@ -20,9 +20,9 @@ export const Bt = styled.button`
     border: none;
     transition: .3s;
     font-family: 'Adero', monospace, sans-serif;
-
-    @media(max-width:850px){
-        width: 100%;
+    
+    :hover{
+        cursor: pointer;
     }
 `
 

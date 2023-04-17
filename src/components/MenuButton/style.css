@@ -104,6 +104,7 @@
     transition: .2s;
     cursor: pointer;
     word-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .PopoverContent li *:hover {
@@ -155,7 +156,7 @@
     position: fixed;
     z-index: 5;
     bottom: 10%;
-    right: 2%;
+    right: 8%;
 
     animation-name: botaoMenu;
     animation-duration: .8s;

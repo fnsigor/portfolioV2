@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import '../RadixDialogForm/style.css';
 import axios from 'axios';
 import { EmailContext } from '../../EmailContext';
-
+import { ErrorMessage } from "@hookform/error-message";
+import { useForm } from "react-hook-form";
 
 
 const Formulario = styled.form`
@@ -26,7 +27,7 @@ const Formulario = styled.form`
 			width: 100%;
 		}
 
-		input{
+		div{
 			margin-bottom: 2.4rem;
 		}
 
@@ -50,7 +51,6 @@ const Formulario = styled.form`
 
 		textarea{
 			resize:none;
-			margin-bottom:3rem;
 		}
 
 
@@ -60,6 +60,19 @@ const Formulario = styled.form`
 			color:  ${props => props.theme.darkPurple};
 			background-color: #962abd67;
 		}
+
+        .errorMessage {
+            color: #bf1650;
+            margin-top: 5px;
+            font-size: 1.4rem;
+            font-family: monospace, sans-serif;
+            font-weight: bold
+        }
+
+        .errorMessage::before {
+            display: inline;
+            content: "⚠ ";
+        }
 
 
 
@@ -89,8 +102,16 @@ export function Form({ setIsFormVisible }) {
     const [message, setMessage] = useState('')
     const [enviadoComSucesso, setEnviadoComSucesso] = useContext(EmailContext);
 
-    async function sendEmail(e) {
-        e.preventDefault();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({
+        criteriaMode: "all"
+    });
+
+    async function sendEmail() {
+
         setIsFormVisible(false)
 
         axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -101,36 +122,78 @@ export function Form({ setIsFormVisible }) {
             Mensagem: message
         })
 
-        console.log(data)
         setEnviadoComSucesso(data.success)
     }
 
 
     return (
-        <Formulario onSubmit={sendEmail}>
+        <Formulario onSubmit={handleSubmit(() => { sendEmail() })}>
 
             <div>
                 <label htmlFor="name">Nome:</label>
+
                 <input
                     value={guestName}
-                    onChange={(event) => setGuestName(event.target.value)}
                     placeholder='Seu nome'
                     type="text"
                     id="name"
                     key="name"
+                    {...register("name", {
+                        onChange: e => setGuestName(e.target.value),
+                        required: "Esse campo é obrigatório ",
+                        pattern: {
+                            value: /^[A-Za-z\s]+$/i,
+                            message: "Somente letras nesse campo"
+                        },
+                        minLength: {
+                            value: 2,
+                            message: "Esse campo deve conter no mínimo 2 caracteres"
+                        },
+                    })} />
+
+                <ErrorMessage
+
+                    errors={errors}
+                    name="name"
+                    render={({ messages }) => {
+                        return messages
+                            ? Object.entries(messages).map(([type, message]) => (
+                                <p className='errorMessage' key={type}>{message}</p>
+                            ))
+                            : null;
+                    }}
                 />
+
             </div>
 
             <div>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">E-mail:</label>
                 <input
                     value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                    placeholder='Seu melhor email'
+                    placeholder='Seu melhor E-mail'
                     type="text"
                     name="email"
-                    id="name"
+                    id="email"
                     key="email"
+                    {...register("email", {
+                        onChange: e => setEmail(e.target.value),
+                        pattern: {
+                            value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+                            message: "Insira um E-mail válido"
+                        },
+                    })} />
+
+                <ErrorMessage
+                    errors={errors}
+                    name="email"
+                    render={({ messages }) => {
+                        console.log("messages", messages);
+                        return messages
+                            ? Object.entries(messages).map(([type, message]) => (
+                                <p className='errorMessage' key={type}>{message}</p>
+                            ))
+                            : null;
+                    }}
                 />
             </div>
 
@@ -138,13 +201,32 @@ export function Form({ setIsFormVisible }) {
                 <label htmlFor="message">Mensagem:</label>
                 <textarea
                     value={message}
-                    onChange={e => setMessage(e.target.value)}
                     name="message"
                     id="message"
                     cols="30"
-                    rows="6">
+                    {...register("message", {
+                        onChange: e => setMessage(e.target.value),
+                        required: "Esse campo é obrigatório ",
+                        minLength: {
+                            value: 3,
+                            message: "Esse campo deve conter no mínimo 3 caracteres"
+                        },
+                    })}>
                 </textarea>
+                <ErrorMessage
+                    errors={errors}
+                    name="message"
+                    render={({ messages }) => {
+                        return messages
+                            ? Object.entries(messages).map(([type, message]) => (
+                                <p className='errorMessage' key={type}>{message}</p>
+                            ))
+                            : null;
+                    }}
+                />
             </div>
+
+
             <button className="Button SendEmailButton">Enviar</button>
         </Formulario>
     )
