@@ -44,7 +44,7 @@ const Formulario = styled.form`
 			font-family: monospace;
             word-spacing: -5px;
 
-			padding: .4rem .8rem;
+			padding: .8rem;
 			border: 1px solid  ${props => props.theme.mediumPurple};
 			border-radius: 5px;
 		}
