@@ -58,6 +58,7 @@ export function SectionStack() {
                         popUpDescription="Styled Components, React Router, Radix UI, React Hook Form, Splide" />
                 </li>
                 <li><span>GIT</span></li>
+                <li><span>Sass</span></li>
             </ul>
         </Content>
 
