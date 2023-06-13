@@ -47,7 +47,7 @@ export function SectionStack() {
         <Content className="stack-section" id='stack'>
             <h4 className="subtitle glow">Stack</h4>
             <ul className="stack-list">
-                <li><span>Javascript</span></li>
+                <li><span>JavaScript</span></li>
                 <li><span>HTML</span></li>
                 <li><span>CSS</span></li>
                 <li>
@@ -59,6 +59,8 @@ export function SectionStack() {
                 </li>
                 <li><span>GIT</span></li>
                 <li><span>Sass</span></li>
+                <li><span>TypeScript</span></li>
+                <li><span>Figma</span></li>
             </ul>
         </Content>
 
