@@ -1,9 +1,10 @@
 import styled, { ThemeProvider } from 'styled-components';
 import colors from '../GlobalStyles';
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import { Footer } from './sections/Footer';
 import { IndexProjectCard } from '../components/IndexProjectCard';
 import { MenuButton } from '../components/MenuButton/MenuButton';
+import { useScrollToTop } from '../useScrollToTop';
 
 
 const Content = styled.div`
@@ -65,6 +66,13 @@ const Content = styled.div`
 export function AllProjects() {
 
     const { pinnedItems } = useLoaderData()
+
+    const {pathname} = useLocation()
+
+	const verifyPath = useScrollToTop()
+
+	verifyPath(pathname)
+
 
     return (
 

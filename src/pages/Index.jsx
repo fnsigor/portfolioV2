@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import colors from '../GlobalStyles';
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import { SectionAbout } from './sections/SectionAbout';
 import { SectionStack } from './sections/SectionStack';
 import { SectionProjects } from './sections/SectionProjects';
@@ -11,11 +11,18 @@ import { RadixToast } from '../components/RadixToast/';
 import { useState } from 'react';
 import { EmailContext } from '../EmailContext';
 import { useEffect } from 'react';
+import { useScrollToTop } from '../useScrollToTop';
 
 
 export function Index() {
 
 	const { pinnedItems } = useLoaderData()
+
+	const {pathname} = useLocation()
+
+	const verifyPath = useScrollToTop()
+
+	verifyPath(pathname)
 
 	const [enviadoComSucesso, setEnviadoComSucesso] = useState(null)
 
