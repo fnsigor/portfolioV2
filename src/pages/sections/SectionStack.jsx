@@ -55,7 +55,7 @@ export function SectionStack() {
                         color="#5ccfee"
                         itemName="React"
                         popUpTitle="Ferramentas"
-                        popUpDescription="Styled Components, Redux, React Router, Radix UI, React Hook Form" />
+                        popUpDescription="Styled Components, Redux, React Router, Radix UI, React Hook Form, Nextjs, Core UI, React Query" />
                 </li>
                 <li><span>GIT</span></li>
                 <li><span>Sass</span></li>
