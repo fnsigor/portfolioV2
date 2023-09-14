@@ -59,8 +59,8 @@ export function Header() {
 		<Content>
 			<h1 className='glow'>FNSIGOR</h1>
 			{(window.screen.width >= 365 && window.screen.width <= 419)
-				? (<span>Desenvolvedor <br /> Front-end</span>) :
-				(<span>Desenvolvedor Front-end</span>)}
+				? (<span>Desenvolvedor <br /> WEB</span>) :
+				(<span>Desenvolvedor WEB</span>)}
 			<MenuButton />
 		</Content>
 	)
