@@ -24,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    ::selection {
+        background: #FF00FF;
+    }
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -31,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         color: #fff;
-        user-select: none;
+        user-select: text;
     }
 
     body{
